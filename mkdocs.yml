@@ -1,0 +1,24 @@
+site_name: Future Energy Outlook (FEO)
+site_url: ""
+theme:
+  name: material
+  font:
+    text: Roboto
+    code: Roboto Mono
+  palette:
+    primary: amber
+    accent: indigo
+  features:
+    #- navigation.tabs
+    #- navigation.tabs.sticky
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+  logo: _static/tz_logo.svg
+  favicon: _static/tz_logo_small.svg
+    
+
+  
+  
+
+    
