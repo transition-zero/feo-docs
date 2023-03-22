@@ -1,5 +1,22 @@
 site_name: Future Energy Outlook (FEO)
 site_url: ""
+plugins:
+  - search
+  - multirepo:
+      cleanup: false
+      nav_repos:
+        - name: feo-esmod-osemosys
+          import_url: https://github.com/transition-zero/feo-esmod-osemosys
+          imports: [docs/index.md,
+                    docs/figures/*]
+
+nav:
+  - Home: index.md
+  - Systems modelling: feo-esmod-osemosys/docs/index.md
+  - Data Catalog: feo-data-catalog.md
+  - Python Client: feo-python-client.md
+  - API: feo-api.md
+
 theme:
   name: material
   font:
@@ -9,14 +26,15 @@ theme:
     primary: amber
     accent: indigo
   features:
-    #- navigation.tabs
-    #- navigation.tabs.sticky
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.instant
     - navigation.tracking
     - navigation.sections
   logo: _static/tz_logo.svg
   favicon: _static/tz_logo_small.svg
-    
+  
+
 
   
   
