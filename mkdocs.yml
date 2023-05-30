@@ -10,7 +10,8 @@ plugins:
           import_url: https://github.com/transition-zero/feo-esmod-osemosys
           imports: [docs/index.md,
                     docs/1_indonesia.md,
-                    docs/figures/*]
+                    docs/figures/*,
+                    docs/tables/*]
 
 
 nav:
