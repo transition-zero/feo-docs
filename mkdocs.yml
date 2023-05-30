@@ -2,6 +2,7 @@ site_name: Future Energy Outlook (FEO)
 site_url: ""
 plugins:
   - search
+  - table-reader
   - multirepo:
       cleanup: false
       nav_repos:
@@ -10,7 +11,7 @@ plugins:
           imports: [docs/index.md,
                     docs/1_indonesia.md,
                     docs/figures/*]
-  - table-reader
+
 
 nav:
   - Home: index.md
