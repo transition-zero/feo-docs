@@ -4,32 +4,25 @@ name: Build Documentation using MkDocs
 # events but only for the master branch
 on:
   push:
-    branches: ['main']
+    branches: 
+      - main
   pull_request:
-    branches: ['main']
+    branches:
+      - main
   schedule:
-    - cron: '30 17 * * *'
+    - cron: '41 17 * * *'
 
 jobs:
-  build:
+  deploy:
     name: Build and Deploy Documentation
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Master
-        uses: actions/checkout@v2
-
-      - name: Set up Python 3.7
-        uses: actions/setup-python@v2
+      
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
         with:
-          python-version: '3.x'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install mkdocs-material
-          pip install mkdocs-multirepo-plugin
-
-      - name: Deploy
-        run: |
-          git pull
-          mkdocs gh-deploy
+          python-version: 3.x
+      - run: pip install mkdocs
+      - run: pip install mkdocs-material
+      - run: pip install mkdocs-multirepo-plugin
+      - run: mkdocs gh-deploy --force --clean --verbose
