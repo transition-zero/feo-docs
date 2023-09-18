@@ -10,6 +10,7 @@ plugins:
           import_url: https://github.com/transition-zero/feo-esmod-osemosys
           imports: [docs/index.md,
                     docs/1_indonesia.md,
+                    docs/asean.md,
                     docs/figures/*,
                     docs/tables/*]
 
@@ -19,6 +20,7 @@ nav:
   - Systems modelling: 
     - 'FEO Global': feo-esmod-osemosys/docs/index.md
     - 'Indonesia': feo-esmod-osemosys/docs/1_indonesia.md
+    - 'ASEAN': feo-esmod-osemosys/docs/asean.md
   - Data Catalog: feo-data-catalog.md
   - Python Client: feo-python-client.md
   - API: feo-api.md
